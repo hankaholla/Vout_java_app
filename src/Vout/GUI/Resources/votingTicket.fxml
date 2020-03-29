@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="445.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8.0.202"
+            fx:controller="Vout.GUI.Controller.VotingController">
+    <children>
+        <Pane prefHeight="88.0" prefWidth="643.0" style="-fx-background-color: white;">
+            <children>
+                <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@login/check.png"/>
+                    </image>
+                </ImageView>
+                <TextArea fx:id="voterArea" layoutX="90.0" layoutY="12.0" prefHeight="48.0" prefWidth="404.0">
+                    <font>
+                        <Font size="15.0"/>
+                    </font>
+                </TextArea>
+            </children>
+        </Pane>
+        <ScrollPane layoutX="2.0" layoutY="73.0" prefHeight="373.0" prefWidth="639.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="722.0" prefWidth="643.0"
+                            style="-fx-background-color: #0f84d1;">
+                    <children>
+                        <Label layoutX="43.0" layoutY="23.0" text="Politické strany:" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="156.0" text="Kandidáti" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Button layoutX="340.0" layoutY="590.0" mnemonicParsing="false" onAction="#confirmVote"
+                                prefHeight="62.0" prefWidth="221.0" style="-fx-background-color: #2ecc71;"
+                                text="Potvrdiť hlasovanie" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Button>
+                        <ChoiceBox fx:id="partyChoiceBox" onAction="#selectParty" layoutX="249.0" layoutY="17.0"
+                                   prefHeight="39.0" prefWidth="181.0"/>
+                        <TextArea fx:id="candidatesArea" layoutX="43.0" layoutY="196.0" prefHeight="224.0"
+                                  prefWidth="556.0"/>
+                        <Label layoutX="67.0" layoutY="450.0" text="Prvý hlas" textFill="WHITE">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="232.0" layoutY="450.0" text="Druhý hlas" textFill="WHITE">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="400.0" layoutY="450.0" text="Tretí hlas" textFill="WHITE">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="vote1Field" layoutX="67.0" layoutY="486.0" prefHeight="48.0" prefWidth="64.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="vote2Field" layoutX="238.0" layoutY="486.0" prefHeight="48.0"
+                                   prefWidth="64.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </TextField>
+                        <TextField fx:id="vote3Field" layoutX="408.0" layoutY="486.0" prefHeight="48.0"
+                                   prefWidth="64.0">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </TextField>
+                        <ChoiceBox fx:id="functionChoiceBox" onAction="#selectFunction" layoutX="250.0" layoutY="93.0"
+                                   prefHeight="39.0" prefWidth="180.0"/>
+                        <Label layoutX="39.0" layoutY="99.0" text="Druh komunálnej voľby:" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

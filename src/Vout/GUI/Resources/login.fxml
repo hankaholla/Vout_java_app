@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
+            prefHeight="222.0" prefWidth="539.0" style="-fx-background-color: #0F84D1;"
+            xmlns="http://javafx.com/javafx/8.0.202" fx:controller="Vout.GUI.Controller.LoginController">
+    <children>
+        <Pane layoutY="24.0" prefHeight="206.0" prefWidth="539.0">
+            <children>
+                <TextField fx:id="pin" layoutX="253.0" layoutY="86.0" onAction="#confirm" prefHeight="34.0"
+                           prefWidth="200.0"
+                           style="-fx-border-color: #3498db; -fx-background-color: #fff; -fx-background-insets: 0; -fx-border-radius: 3;"/>
+                <Label layoutX="56.0" layoutY="93.0" text="Zadajte prihlasovací údaj" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0"/>
+                    </font>
+                </Label>
+                <Separator layoutX="58.0" layoutY="58.0" opacity="0.15" prefHeight="3.0" prefWidth="423.0"/>
+                <Button layoutX="369.0" layoutY="142.0" mnemonicParsing="false" onAction="#confirm" prefHeight="34.0"
+                        prefWidth="112.0" style="-fx-background-color: #2ecc71;" text="Prihlásiť" textFill="WHITE">
+                    <font>
+                        <Font name="Lato Regular" size="16.0"/>
+                    </font>
+                </Button>
+            </children>
+        </Pane>
+        <Pane prefHeight="84.0" prefWidth="539.0" style="-fx-background-color: #fff;">
+            <children>
+                <Label layoutX="243.0" layoutY="27.0" text="Vout" textFill="#0f84d1">
+                    <font>
+                        <Font name="Lato Heavy" size="24.0"/>
+                    </font>
+                </Label>
+                <ImageView fitHeight="34.0" fitWidth="38.0" layoutX="186.0" layoutY="25.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@login/check.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

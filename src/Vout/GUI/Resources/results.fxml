@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="596.0" xmlns="http://javafx.com/javafx/8.0.202"
+            fx:controller="Vout.GUI.Controller.ResultsController">
+    <children>
+        <Pane layoutX="-1.0" prefHeight="143.0" prefWidth="600.0">
+            <children>
+                <Text fill="#0f84d1" layoutX="111.0" layoutY="48.0" stroke="BLACK" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="Priebežné výsledky aktuálne prebiehajúcich volieb:" textAlignment="CENTER"
+                      wrappingWidth="437.5078125">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Text>
+                <TextArea fx:id="electionName" layoutX="140.0" layoutY="71.0" prefHeight="57.0" prefWidth="379.0">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </TextArea>
+            </children>
+        </Pane>
+        <ImageView fitHeight="63.0" fitWidth="74.0" layoutX="32.0" layoutY="24.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@login/check.png"/>
+            </image>
+        </ImageView>
+        <Pane layoutX="-2.0" layoutY="143.0" prefHeight="257.0" prefWidth="600.0"
+              style="-fx-background-color: #0F84D1;">
+            <children>
+                <Button layoutX="410.0" layoutY="32.0" mnemonicParsing="false" onAction="#closeElection"
+                        prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: #2ecc71;" text="Ukončiť voľby"
+                        textFill="WHITE">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Button>
+                <TextArea fx:id="results" layoutX="53.0" layoutY="32.0" prefHeight="195.0" prefWidth="315.0"/>
+                <Button layoutX="510.0" layoutY="215.0" mnemonicParsing="false" onAction="#goHome"
+                        style="-fx-background-color: #2ecc71;" text="Domov" textFill="WHITE"/>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

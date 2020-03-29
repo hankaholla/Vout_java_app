@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="422.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8.0.202"
+            fx:controller="Vout.GUI.Controller.DeclareController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="643.0" style="-fx-background-color: white;">
+            <children>
+                <Text fill="#0f84d1" layoutX="80.0" layoutY="40.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Upravte parametre pre voľby:" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Text>
+                <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="26.0" layoutY="14.0" pickOnBounds="true"
+                           preserveRatio="true">
+                    <image>
+                        <Image url="@login/check.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <ScrollPane layoutX="2.0" layoutY="89.0" prefHeight="334.0" prefWidth="639.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="643.0"
+                            style="-fx-background-color: #0f84d1;">
+                    <children>
+                        <DatePicker fx:id="datePicker" layoutX="53.0" layoutY="424.0" onAction="#selectDate"
+                                    prefHeight="55.0" prefWidth="267.0"/>
+                        <TextField fx:id="limit" layoutX="54.0" layoutY="575.0" onAction="#confirmForm"/>
+                        <TextField fx:id="round" layoutX="54.0" layoutY="947.0" onAction="#confirmForm"/>
+                        <Label layoutX="53.0" layoutY="651.0" text="Politické strany" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="114.0" text="Kandidáti" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="389.0" text="Dátum" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="53.0" layoutY="529.0" text="Limit zvolených kandidátov" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="54.0" layoutY="903.0" text="Číslo volebného kola" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <Button layoutX="350.0" layoutY="986.0" mnemonicParsing="false" onAction="#confirmForm"
+                                prefHeight="62.0" prefWidth="221.0" style="-fx-background-color: #2ecc71;"
+                                text="Vyhlásiť voľby" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                        </Button>
+                        <ChoiceBox fx:id="choiceBox" layoutX="161.0" layoutY="34.0" onAction="#selectElection"
+                                   prefHeight="40.0" prefWidth="299.0"/>
+                        <Label layoutX="53.0" layoutY="40.0" text="Typ volieb" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextArea fx:id="candidatesArea" layoutX="61.0" layoutY="154.0" prefHeight="200.0"
+                                  prefWidth="403.0"/>
+                        <TextArea fx:id="partyArea" layoutX="53.0" layoutY="687.0" prefHeight="191.0"
+                                  prefWidth="292.0"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>
